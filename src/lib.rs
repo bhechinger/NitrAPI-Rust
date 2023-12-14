@@ -13,6 +13,8 @@
 mod query_builder;
 // pub mod cards;
 pub mod ping;
+pub mod maintenance;
+pub mod version;
 // pub mod sets;
 // pub mod subtypes;
 // pub mod supertypes;

@@ -6,15 +6,15 @@ use serde::Deserialize;
 
 #[doc(hidden)]
 #[derive(Clone, Debug, Deserialize)]
-pub struct Ping {
+pub struct Version {
     pub status: String,
     pub message: String,
 }
 
-pub async fn all() -> Result<Ping, StatusCode> {
-    let ping: Result<Ping, StatusCode> = query_builder::all("ping").await;
+pub async fn all() -> Result<Version, StatusCode> {
+    let version: Result<Version, StatusCode> = query_builder::all("version").await;
 
-    match ping {
+    match version {
         Ok(t) => Ok(t),
         Err(e) => Err(e),
     }
